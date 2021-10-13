@@ -17,6 +17,7 @@
     <PackageTags>placid image-generation</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
