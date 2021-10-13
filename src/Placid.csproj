@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netcoreapp2.0;netcoreapp3.0;net5.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Placid</PackageId>
+    <PackageVersion>0.0.0-alpha</PackageVersion>
+    <Description>.NET client library for the Placid.app image generation service.</Description>
+    <Authors>mosen</Authors>
+    <Copyright>Copyright © 2021 Jarrod Mosen</Copyright>
+    <RepositoryUrl>https://github.com/wub/Placid.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>placid image-generation</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="3.2.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
