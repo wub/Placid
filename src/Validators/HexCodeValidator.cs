@@ -10,6 +10,7 @@ namespace Placid
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
     sealed public class HexCodeAttribute : ValidationAttribute
     {
+        ///
         protected override ValidationResult? IsValid(object? value, ValidationContext context)
         {
             if (!string.IsNullOrWhiteSpace(value as string))
