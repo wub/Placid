@@ -16,7 +16,15 @@ namespace Placid
         /// Your "Private Token" API token for Placid. Found in project settings.
         /// This usually starts with "placid-".
         /// </param>
-        public PlacidClient(string apiToken) => _apiToken = apiToken;
+        public PlacidClient(string apiToken)
+        {
+            _apiToken = apiToken;
+
+            FlurlHttp.Configure(settings =>
+            {
+                settings.HttpClientFactory = new PollyHttpClientFactory();
+            });
+        }
 
         /// <summary>
         /// Generates an image with the Placid service.

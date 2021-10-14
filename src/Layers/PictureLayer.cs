@@ -1,10 +1,12 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
 namespace Placid.Layers
 {
+    /// <summary>
+    /// A layer that shows an image.
+    /// </summary>
     public class PictureLayer : Layer
     {
         /// <summary>
@@ -26,6 +28,9 @@ namespace Placid.Layers
         [JsonIgnore]
         public uint? ScreenshotViewportHeight { get; set; }
 
+        /// <summary>
+        /// Viewport size for screenshots. Defaults to "1280x1024".
+        /// </summary>
         [JsonProperty("image_viewport")]
         public string? ScreenshotViewport =>  
             ScreenshotViewportWidth != null && ScreenshotViewportHeight != null

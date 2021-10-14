@@ -2,6 +2,9 @@ using Newtonsoft.Json;
 
 namespace Placid.Layers
 {
+    /// <summary>
+    /// A layer that shows a rectangle.
+    /// </summary>
     public class RectangleLayer : Layer
     {
         [HexCode, JsonProperty("background_color")]

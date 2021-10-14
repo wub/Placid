@@ -2,6 +2,9 @@ using Newtonsoft.Json;
 
 namespace Placid.Layers
 {
+    /// <summary>
+    /// A layer that shows text.
+    /// </summary>
     public class TextLayer : Layer
     {
         /// <summary>
