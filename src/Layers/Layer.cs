@@ -9,12 +9,6 @@ namespace Placid.Layers
     public abstract class Layer
     {
         /// <summary>
-        /// The name of the layer, as defined in the Placid template.
-        /// </summary>
-        [Required, JsonProperty(Required = Required.Always)]
-        public string? LayerName { get; set; }
-
-        /// <summary>
         /// If Hide is set to true, the layer will be hidden. Defaults to false.
         /// </summary>
         public bool Hide { get; set; }

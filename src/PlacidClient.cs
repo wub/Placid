@@ -1,6 +1,8 @@
 using System.Threading.Tasks;
 using Flurl;
 using Flurl.Http;
+using Flurl.Http.Configuration;
+using Newtonsoft.Json;
 
 namespace Placid
 {
@@ -13,8 +15,7 @@ namespace Placid
 
         /// <inheritdoc cref="PlacidClient" />
         /// <param name="apiToken">
-        /// Your "Private Token" API token for Placid. Found in project settings.
-        /// This usually starts with "placid-".
+        /// Your "Private Token" API token for Placid. Found in project settings. This usually starts with "placid-".
         /// </param>
         public PlacidClient(string apiToken)
         {
@@ -23,6 +24,11 @@ namespace Placid
             FlurlHttp.Configure(settings =>
             {
                 settings.HttpClientFactory = new PollyHttpClientFactory();
+                settings.JsonSerializer = new NewtonsoftJsonSerializer(new JsonSerializerSettings()
+                {
+                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Include,
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                });
             });
         }
 
